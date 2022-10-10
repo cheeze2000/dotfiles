@@ -1,0 +1,11 @@
+require("config.plugins.onedark")
+
+require("config.plugins.cmp")
+require("config.plugins.comment")
+require("config.plugins.gitsigns")
+require("config.plugins.guess-indent")
+require("config.plugins.lspconfig")
+require("config.plugins.lualine")
+require("config.plugins.nvim-tree")
+require("config.plugins.nvim-treesitter")
+require("config.plugins.trim")

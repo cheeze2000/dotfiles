@@ -14,5 +14,13 @@ else
 	echo "Created a symlink to ~/.config/kitty"
 fi
 
+# Neovim
+if [ -d ~/.config/nvim ]; then
+	echo "~/.config/nvim already exists, skipping..."
+else
+	ln -s ~/dotfiles/nvim ~/.config/nvim
+	echo "Created a symlink to ~/.config/nvim"
+fi
+
 echo "Cleaning up..."
 # rm ./setup.sh
