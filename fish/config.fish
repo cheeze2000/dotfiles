@@ -23,6 +23,10 @@ function fish_prompt
     echo -n " "
 end
 
+function magit
+    emacs -nw
+end
+
 set fish_color_valid_path
 set fish_pager_color_prefix cyan --bold
 

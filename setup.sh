@@ -1,3 +1,11 @@
+# Emacs
+if [ -d ~/.emacs.d ]; then
+	echo "~/.emacs.d already exists, skipping..."
+else
+	ln -s ~/dotfiles/emacs ~/.emacs.d
+	echo "Created a symlink to ~/.emacs.d"
+fi
+
 # Fish
 if [ -d ~/.config/fish ]; then
 	echo "~/.config/fish already exists, skipping..."
