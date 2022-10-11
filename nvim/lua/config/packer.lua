@@ -53,24 +53,27 @@ require("packer").startup(
 			requires = "nvim-lua/plenary.nvim",
 		}
 
-		use "nvim-treesitter/nvim-treesitter"
+		if vim.fn.isdirectory(treesitter_dir) == 1 then
+			use {
+				"nvim-treesitter/nvim-treesitter",
+				run = ":TSUpdate",
+			}
+
+			require("config.plugins")
+		else
+			use "nvim-treesitter/nvim-treesitter"
+
+			vim.api.nvim_create_autocmd(
+				{ "User" },
+				{
+					pattern = "PackerComplete",
+					callback = function () require("config.plugins") end,
+				}
+			)
+		end
 
 		use "cappyzawa/trim.nvim"
 
-		vim.api.nvim_create_autocmd(
-			{ "User" },
-			{
-				pattern = "PackerComplete",
-				callback = function ()
-					require("config.plugins")
-					if vim.fn.isdirectory(treesitter_dir) == 1 then
-						vim.api.nvim_command("TSUpdate")
-					end
-				end,
-			}
-		)
-
-		print("Installing and updating packages...")
 		require("packer").sync()
 	end
 )
