@@ -24,7 +24,18 @@ require("lualine").setup({
 			{ "diagnostics" },
 		},
 		lualine_x = { "filetype" },
-		lualine_y = {},
+		lualine_y = {
+			{
+				function ()
+					local servers = {}
+					vim.lsp.for_each_buffer_client(0, function (client, _, _)
+						table.insert(servers, client.name)
+					end)
+
+					return table.concat(servers, " ")
+				end,
+			}
+		},
 	},
 	inactive_sections = {
 		lualine_c = {
@@ -32,4 +43,3 @@ require("lualine").setup({
 		},
 	},
 })
-
