@@ -23,6 +23,10 @@ function fish_prompt
     echo -n " "
 end
 
+function icat
+    kitty +kitten icat $argv
+end
+
 function magit
     emacs -nw
 end
