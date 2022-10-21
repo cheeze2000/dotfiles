@@ -23,8 +23,6 @@ require("packer").startup(
 	function (use)
 		use "wbthomason/packer.nvim"
 
-		use "navarasu/onedark.nvim"
-
 		use {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/nvim-cmp",
@@ -48,10 +46,14 @@ require("packer").startup(
 
 		use "kyazdani42/nvim-tree.lua"
 
+		use "navarasu/onedark.nvim"
+
 		use {
 			"nvim-telescope/telescope.nvim",
 			requires = "nvim-lua/plenary.nvim",
 		}
+
+		use "cappyzawa/trim.nvim"
 
 		if vim.fn.isdirectory(treesitter_dir) == 1 then
 			use {
@@ -71,8 +73,6 @@ require("packer").startup(
 				}
 			)
 		end
-
-		use "cappyzawa/trim.nvim"
 
 		require("packer").sync()
 	end
