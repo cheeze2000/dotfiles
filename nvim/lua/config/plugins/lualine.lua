@@ -21,7 +21,7 @@ require("lualine").setup({
 			{ "diff", source = diff_source },
 		},
 		lualine_c = {
-			{ "filename", path = 3 },
+			{ "filename" },
 			{ "diagnostics" },
 		},
 		lualine_x = { "filetype" },
