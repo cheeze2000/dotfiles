@@ -16,15 +16,31 @@ require("lualine").setup({
 		disabled_filetypes = { "NvimTree", "packer" },
 	},
 	sections = {
+		lualine_a = {
+			{
+				"branch",
+				icon = "",
+			},
+		},
 		lualine_b = {
-			"branch",
-			{ "diff", source = diff_source },
+			{
+				"filename",
+				symbols = { modified = "", readonly = "", unnamed = "" }
+			},
 		},
 		lualine_c = {
-			{ "filename" },
-			{ "diagnostics" },
+			{
+				"diff",
+				symbols = { added = " ", modified = " ", removed = " " },
+				source = diff_source,
+			},
 		},
-		lualine_x = { "filetype" },
+		lualine_x = {
+			{
+				"diagnostics",
+				symbols = { error = " ", warn = " ", info = " ", hint = " " },
+			},
+		},
 		lualine_y = {
 			{
 				function ()
@@ -35,7 +51,7 @@ require("lualine").setup({
 
 					return table.concat(servers, " ")
 				end,
-			}
+			},
 		},
 	},
 	inactive_sections = {
