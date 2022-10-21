@@ -25,7 +25,7 @@ require("lualine").setup({
 		lualine_b = {
 			{
 				"filename",
-				symbols = { modified = "", readonly = "", unnamed = "" }
+				symbols = { modified = "", readonly = "", unnamed = "" },
 			},
 		},
 		lualine_c = {
@@ -56,7 +56,11 @@ require("lualine").setup({
 	},
 	inactive_sections = {
 		lualine_c = {
-			{ "filename", path = 3 },
+			{
+				"filename",
+				path = 3,
+				symbols = { modified = "", readonly = "", unnamed = "" },
+			},
 		},
 	},
 })
