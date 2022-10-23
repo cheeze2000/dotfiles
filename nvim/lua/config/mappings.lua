@@ -12,6 +12,7 @@ bind_key("v","<Leader>c", ":lua require('Comment.api').toggle.linewise(vim.fn.vi
 bind_key("n", "<Leader>gd", ":Gitsigns preview_hunk<CR>")
 bind_key("n", "<Leader>gr", ":Gitsigns reset_hunk<CR>")
 
+bind_key("n", "<Leader>a", ":lua vim.lsp.buf.code_action()<CR>")
 bind_key("n", "<Leader>d", ":lua vim.diagnostic.open_float()<CR>")
 bind_key("n", "<Leader>h", ":lua vim.lsp.buf.hover()<CR>")
 bind_key("n", "<Leader>l", ":LspRestart<CR>")

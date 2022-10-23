@@ -48,9 +48,11 @@ require("packer").startup(
 
 		use "navarasu/onedark.nvim"
 
+		use "nvim-lua/plenary.nvim"
+
 		use {
 			"nvim-telescope/telescope.nvim",
-			requires = "nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope-ui-select.nvim",
 		}
 
 		use "cappyzawa/trim.nvim"
