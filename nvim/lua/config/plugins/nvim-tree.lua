@@ -51,5 +51,3 @@ require("nvim-tree").setup({
 		custom = { "^.git$" },
 	},
 })
-
-vim.api.nvim_command("highlight! link NvimTreeIndentMarker Comment")
