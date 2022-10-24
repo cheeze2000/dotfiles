@@ -4,7 +4,6 @@ end
 
 local esc = vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
 local hop = require("hop")
-local hop_d = require("hop.hint").HintDirection
 
 vim.g.mapleader = " "
 
@@ -22,30 +21,8 @@ end)
 bind_key("n", "<Leader>gd", "<Cmd>Gitsigns preview_hunk<CR>")
 bind_key("n", "<Leader>gr", "<Cmd>Gitsigns reset_hunk<CR>")
 
-bind_key({ "n", "v" }, "<Leader>hh", function ()
-	hop.hint_words({
-		direction = hop_d.BEFORE_CURSOR,
-		current_line_only = true,
-	})
-end)
-
-bind_key({ "n", "v" }, "<Leader>hj", function ()
-	hop.hint_words({
-		direction = hop_d.AFTER_CURSOR,
-	})
-end)
-
-bind_key({ "n", "v" }, "<Leader>hk", function ()
-	hop.hint_words({
-		direction = hop_d.BEFORE_CURSOR,
-	})
-end)
-
-bind_key({ "n", "v" }, "<Leader>hl", function ()
-	hop.hint_words({
-		direction = hop_d.AFTER_CURSOR,
-		current_line_only = true,
-	})
+bind_key({ "n", "v" }, "<Leader>h", function ()
+	hop.hint_words()
 end)
 
 bind_key("n", "<Leader>a", function ()
