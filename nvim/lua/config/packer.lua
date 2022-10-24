@@ -36,6 +36,8 @@ require("packer").startup(
 
 		use "NMAC427/guess-indent.nvim"
 
+		use "phaazon/hop.nvim"
+
 		use "nvim-lualine/lualine.nvim"
 
 		use {
