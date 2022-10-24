@@ -19,7 +19,7 @@ bind_key("v", "<Leader>c", function ()
 	require("Comment.api").toggle.linewise(vim.fn.visualmode())
 end)
 
-bind_key("n", "<Leader>gr", "<Cmd>Gitsigns reset_hunk<CR>")
+bind_key("n", "<Leader>gd", "<Cmd>Gitsigns preview_hunk<CR>")
 bind_key("n", "<Leader>gr", "<Cmd>Gitsigns reset_hunk<CR>")
 
 bind_key({ "n", "v" }, "<Leader>hh", function ()
