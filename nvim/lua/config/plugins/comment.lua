@@ -1,6 +1,6 @@
 require("Comment").setup({
-	toggler = {},
-	opleader = {},
-	extra = {},
-	mappings = {},
+	mappings = {
+		basic = false,
+		extra = false,
+	},
 })
