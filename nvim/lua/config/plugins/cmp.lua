@@ -1,5 +1,10 @@
 local cmp = require("cmp")
 
+local opts = {
+	border = "rounded",
+	winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+}
+
 cmp.setup({
 	mapping = {
 		["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -14,7 +19,8 @@ cmp.setup({
 		end,
 	},
 	window = {
-		documentation = cmp.config.window.bordered(),
+		completion = opts,
+		documentation = opts,
 	},
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp", group_index = 1 },
