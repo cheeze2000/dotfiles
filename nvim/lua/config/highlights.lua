@@ -1,15 +1,27 @@
-vim.api.nvim_set_hl(0, "NvimTreeIndentMarker", {
+local function hl(name, opts)
+	vim.api.nvim_set_hl(0, name, opts)
+end
+
+hl("FloatBorder", {
 	link = "Comment",
 })
 
-vim.api.nvim_set_hl(0, "HopNextKey", {
+hl("HopNextKey", {
 	link = "ErrorMsg",
 })
 
-vim.api.nvim_set_hl(0, "HopNextKey1", {
+hl("HopNextKey1", {
 	link = "ErrorMsg",
 })
 
-vim.api.nvim_set_hl(0, "HopNextKey2", {
+hl("HopNextKey2", {
 	link = "ErrorMsg",
+})
+
+hl("NormalFloat", {
+	link = "Normal",
+})
+
+hl("NvimTreeIndentMarker", {
+	link = "Comment",
 })
