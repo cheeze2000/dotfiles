@@ -66,6 +66,16 @@ require("packer").startup(
 			}
 
 			require("config.plugins")
+
+			vim.api.nvim_create_autocmd(
+				{ "User" },
+				{
+					pattern = "PackerComplete",
+					callback = function ()
+						print("All plugins are up-to-date!")
+					end,
+				}
+			)
 		else
 			use "nvim-treesitter/nvim-treesitter"
 
