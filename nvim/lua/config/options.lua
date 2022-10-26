@@ -8,9 +8,9 @@ vim.opt.termguicolors = true
 vim.opt.wrap = false
 
 vim.opt.listchars:append({
-	extends = "→",
+	extends = "",
 	lead = "·",
-	precedes = "←",
+	precedes = "",
 	tab = "│ ",
 	trail = "·",
 })
