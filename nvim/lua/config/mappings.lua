@@ -21,7 +21,7 @@ bind_key("n", "<Leader>gd", "<Cmd>Gitsigns preview_hunk<CR>")
 bind_key("n", "<Leader>gr", "<Cmd>Gitsigns reset_hunk<CR>")
 
 bind_key({ "n", "v" }, "<Leader>h", function ()
-	require("hop").hint_words()
+	require("hop").hint_patterns({}, "\\S\\+")
 end)
 
 bind_key("n", "<Leader>a", function ()
