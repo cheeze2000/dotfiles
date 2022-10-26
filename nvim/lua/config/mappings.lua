@@ -29,7 +29,7 @@ bind_key("n", "<Leader>a", function ()
 end)
 
 bind_key("n", "<Leader>d", function ()
-	vim.diagnostic.open_float()
+	vim.diagnostic.open_float({ border = "rounded" })
 end)
 
 bind_key("n", "<Leader>i", function ()
