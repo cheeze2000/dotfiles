@@ -1,9 +1,7 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-	border = "rounded",
-})
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
 
 local lspconfig = require("lspconfig")
 
