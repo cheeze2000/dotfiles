@@ -35,3 +35,4 @@ set fish_color_valid_path
 set fish_pager_color_prefix cyan --bold
 
 fish_add_path /home/cheeze/.ghcup/bin
+fish_add_path /home/cheeze/.local/bin
