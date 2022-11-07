@@ -7,4 +7,7 @@ require("gitsigns").setup({
 		changedelete = { hl = "GitSignsChange", text = "~", numhl="GitSignsChangeNr", linehl="GitSignsChangeLn" },
 		untracked = { hl = "GitSignsAdd", text = "│", numhl="GitSignsAddNr", linehl="GitSignsAddLn" },
 	},
+	preview_config = {
+		border = "rounded",
+	},
 })
