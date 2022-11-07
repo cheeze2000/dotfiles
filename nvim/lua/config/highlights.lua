@@ -6,6 +6,14 @@ hl("FloatBorder", {
 	link = "Comment",
 })
 
+hl("GitSignsAddPreview", {
+	link = "DiffAdded",
+})
+
+hl("GitSignsDeletePreview", {
+	link = "DiffRemoved",
+})
+
 hl("HopNextKey", {
 	link = "ErrorMsg",
 })
