@@ -7,10 +7,11 @@ local opts = {
 
 cmp.setup({
 	mapping = {
-		["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-		["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+		["<C-p>"] = cmp.mapping.select_prev_item(),
+		["<C-n>"] = cmp.mapping.select_next_item(),
 		["<C-d>"] = cmp.mapping.scroll_docs(9),
 		["<C-u>"] = cmp.mapping.scroll_docs(-9),
+		["<CR>"] = cmp.mapping.confirm(),
 	},
 	preselect = cmp.PreselectMode.None,
 	snippet = {
