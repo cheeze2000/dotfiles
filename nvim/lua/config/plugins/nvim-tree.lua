@@ -50,4 +50,9 @@ require("nvim-tree").setup({
 	filters = {
 		custom = { "^.git$" },
 	},
+	actions = {
+		change_dir = {
+			global = true,
+		},
+	},
 })
