@@ -1,35 +1,23 @@
-local function hl(name, opts)
-	vim.api.nvim_set_hl(0, name, opts)
+local function hl(name, link)
+	vim.api.nvim_set_hl(0, name, { link = link })
 end
 
-hl("FloatBorder", {
-	link = "Comment",
-})
+hl("DapUIBreakpointsCurrentLine", "WarningMsg")
+hl("DapUIBreakpointsLine", "Comment")
+hl("DapUIBreakpointsPath", "MoreMsg")
+hl("DapUIDecoration", "WarningMsg")
+hl("DapUIScope", "MoreMsg")
+hl("DapUIFloatBorder", "Comment")
 
-hl("GitSignsAddPreview", {
-	link = "DiffAdded",
-})
+hl("GitSignsAddPreview", "DiffAdded")
+hl("GitSignsDeletePreview", "DiffRemoved")
 
-hl("GitSignsDeletePreview", {
-	link = "DiffRemoved",
-})
+hl("HopNextKey", "ErrorMsg")
+hl("HopNextKey1", "ErrorMsg")
+hl("HopNextKey2", "ErrorMsg")
 
-hl("HopNextKey", {
-	link = "ErrorMsg",
-})
+hl("FloatBorder", "Comment")
 
-hl("HopNextKey1", {
-	link = "ErrorMsg",
-})
+hl("NormalFloat", "Normal")
 
-hl("HopNextKey2", {
-	link = "ErrorMsg",
-})
-
-hl("NormalFloat", {
-	link = "Normal",
-})
-
-hl("NvimTreeIndentMarker", {
-	link = "Comment",
-})
+hl("NvimTreeIndentMarker", "Comment")
