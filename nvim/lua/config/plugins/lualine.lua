@@ -44,12 +44,18 @@ require("lualine").setup({
 		lualine_y = {
 			{
 				function ()
-					local servers = {}
-					vim.lsp.for_each_buffer_client(0, function (client, _, _)
-						table.insert(servers, client.name)
+					local instances = {}
+
+					local dap_session = require("dap").session()
+					if dap_session ~= nil then
+						table.insert(instances, dap_session.adapter.name)
+					end
+
+					vim.lsp.for_each_buffer_client(0, function (client)
+						table.insert(instances, client.name)
 					end)
 
-					return table.concat(servers, " ")
+					return table.concat(instances, " ")
 				end,
 			},
 		},
