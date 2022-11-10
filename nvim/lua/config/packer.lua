@@ -38,6 +38,11 @@ require("packer").startup(
 
 		use "phaazon/hop.nvim"
 
+		use {
+			"mfussenegger/nvim-dap",
+			"rcarriga/nvim-dap-ui",
+		}
+
 		use "nvim-lualine/lualine.nvim"
 
 		use {
