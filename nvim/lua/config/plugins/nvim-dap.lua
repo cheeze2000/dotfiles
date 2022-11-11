@@ -53,6 +53,11 @@ vim.fn.sign_define("DapBreakpoint", {
 	texthl = "ErrorMsg",
 })
 
+vim.fn.sign_define("DapBreakpointRejected", {
+	text = "",
+	texthl = "Comment",
+})
+
 vim.fn.sign_define("DapStopped", {
 	text = "",
 	texthl = "WarningMsg",
