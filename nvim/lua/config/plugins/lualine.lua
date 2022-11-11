@@ -13,7 +13,11 @@ require("lualine").setup({
 	options = {
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
-		disabled_filetypes = { "NvimTree", "packer" },
+		disabled_filetypes = {
+			"NvimTree",
+			"dapui_scopes",
+			"packer",
+		},
 	},
 	sections = {
 		lualine_a = {

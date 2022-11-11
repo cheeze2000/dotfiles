@@ -24,10 +24,29 @@ dap.configurations.d = {
 
 dapui.setup({
 	icons = { expanded = "", collapsed = "", current_frame = "" },
+	layouts = {
+		{
+			elements = { "scopes" },
+			size = 30,
+			position = "right",
+		},
+	},
 	floating = {
 		border = "rounded",
 	},
 })
+
+dap.listeners.after.event_initialized["dapui_config"] = function()
+	dapui.open()
+end
+
+dap.listeners.before.event_terminated["dapui_config"] = function()
+	dapui.close()
+end
+
+dap.listeners.before.event_exited["dapui_config"] = function()
+	dapui.close()
+end
 
 vim.fn.sign_define("DapBreakpoint", {
 	text = "",

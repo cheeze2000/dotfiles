@@ -49,10 +49,6 @@ bind_key("n", "<Leader>dm", function ()
 	require("dapui").float_element()
 end)
 
-bind_key("n", "<Leader>ds", function ()
-	require("dapui").float_element("scopes")
-end)
-
 bind_key("n", "<Leader>dx", function ()
 	require("dap").terminate()
 end)
