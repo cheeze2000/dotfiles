@@ -16,3 +16,5 @@ vim.opt.listchars:append({
 })
 
 vim.g.python_recommended_style = 0
+
+vim.api.nvim_command("filetype plugin indent off")
