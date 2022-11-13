@@ -5,6 +5,7 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { 
 
 local lspconfig = require("lspconfig")
 
+lspconfig.ccls.setup({})
 lspconfig.eslint.setup({})
 lspconfig.hls.setup({})
 lspconfig.intelephense.setup({})
