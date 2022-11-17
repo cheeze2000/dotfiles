@@ -51,7 +51,7 @@ require("packer").startup(
 			"williamboman/mason-lspconfig.nvim",
 		}
 
-		use "kyazdani42/nvim-tree.lua"
+		use "nvim-tree/nvim-tree.lua"
 
 		use "navarasu/onedark.nvim"
 
