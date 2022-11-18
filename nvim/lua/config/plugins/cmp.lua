@@ -13,6 +13,7 @@ cmp.setup({
 		["<C-u>"] = cmp.mapping.scroll_docs(-9),
 		["<CR>"] = cmp.mapping.confirm(),
 	},
+	preselect = cmp.PreselectMode.None,
 	snippet = {
 		expand = function (args)
 			require("luasnip").lsp_expand(args.body)
