@@ -25,6 +25,7 @@ require("nvim-tree").setup({
 			},
 		},
 		icons = {
+			symlink_arrow = "  ",
 			show = {
 				file = false,
 				folder = true,
