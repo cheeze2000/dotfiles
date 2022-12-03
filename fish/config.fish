@@ -31,6 +31,10 @@ function magit
     emacs -nw
 end
 
+function ssh
+    kitty +kitten ssh $argv
+end
+
 set fish_color_valid_path
 set fish_pager_color_prefix cyan --bold
 
