@@ -57,6 +57,8 @@ require("packer").startup(
 
 		use "nvim-lua/plenary.nvim"
 
+		use "simrat39/rust-tools.nvim"
+
 		use {
 			"nvim-telescope/telescope.nvim",
 			"nvim-telescope/telescope-ui-select.nvim",

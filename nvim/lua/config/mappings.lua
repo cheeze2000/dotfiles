@@ -56,6 +56,10 @@ end)
 bind_key("n", "<Leader>gd", "<Cmd>Gitsigns preview_hunk<CR>")
 bind_key("n", "<Leader>gr", "<Cmd>Gitsigns reset_hunk<CR>")
 
+bind_key("n", "<Leader>la", function ()
+	vim.lsp.buf.code_action()
+end)
+
 bind_key("n", "<Leader>ld", function ()
 	vim.diagnostic.open_float({ border = "rounded" })
 end)
