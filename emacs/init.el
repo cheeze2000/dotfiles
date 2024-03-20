@@ -38,15 +38,18 @@
 (use-package evil
              :ensure t
              :init
-             (setq evil-want-keybinding nil)
+             (setq-default evil-want-keybinding nil)
              :config
              (evil-mode 1))
 
 (use-package evil-collection
-             :after evil
+             :after evil magit
              :ensure t
+             :init
+             (setq-default evil-want-C-u-scroll t)
              :config
-             (evil-collection-init))
+             (evil-collection-init)
+             (evil-define-key evil-collection-magit-state magit-mode-map "q" nil))
 
 (use-package ivy
              :config
@@ -55,6 +58,7 @@
 (use-package magit
              :ensure t
              :config
+             (define-key magit-status-mode-map "q" nil)
              (setq-default git-commit-summary-max-length 50)
              (magit)
              (delete-other-windows))
