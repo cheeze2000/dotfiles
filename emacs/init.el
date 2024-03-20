@@ -48,6 +48,10 @@
              :config
              (evil-collection-init))
 
+(use-package ivy
+             :config
+             (ivy-mode))
+
 (use-package magit
              :ensure t
              :config
