@@ -2,13 +2,12 @@ function fish_greeting
 end
 
 function fish_prompt
+    set -l s $status
     echo ""
 
-    if set -q IN_NIX_SHELL
-        set_color --bold cyan
-        echo -n "󱄅  "
-
-        set_color normal
+    if test $s -ne 0
+        set_color red
+        echo -n "  "
     end
 
     set_color yellow
@@ -19,11 +18,3 @@ function fish_prompt
 
     echo -n "󰅂 "
 end
-
-function fish_right_prompt
-    echo $status
-end
-
-alias ns="nix-shell --command fish -p"
-
-fish_add_path ~/.pack/bin
